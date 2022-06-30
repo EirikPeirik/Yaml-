@@ -1,0 +1,39 @@
+---
+title: Drogon Webviz Demonstration
+
+shared_settings:
+  predefined_expressions:
+    timeseries_expressions: ../vector_calculator_expressions/predefined_vector_calculator_expressions.yaml
+  scratch_ensembles:
+    sens_run: ../01_drogon_design/realization-*/iter-0
+    iter-0: ../01_drogon_ahm/realization-*/iter-0
+    iter-3: ../01_drogon_ahm/realization-*/iter-3
+    iter-0-surfaces: ../01_drogon_ahm/realization-[0-1]/iter-0
+
+# Ensembles used for sensitivity analysis
+dm_ensembles: &dm_ensembles
+  - sens_run
+
+# Ensembles used for history matching analysis
+hm_ensembles: &hm_ensembles
+  - iter-0
+  - iter-3
+
+
+
+# ------------------------------
+options:
+  menu:
+    show_logo: true
+    bar_position: left
+    drawer_position: left
+    initially_pinned: true
+    initially_collapsed: true
+
+# ------------------------------
+layout:
+  - page: PVT
+    content:
+      - PvtPlotter:
+          ensembles: *hm_ensembles
+          pvt_relative_file_path: share/results/tables/pvt.csv
