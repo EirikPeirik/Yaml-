@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug local webviz pcg",
+            "type": "python",
+            "request": "launch", 
+            "program": "/private/ehala/repos/debug.py",
+            "args": [
+                "build",
+                "/private/ehala/webviz-subsurface-testdata/webviz_examples/webviz-bhp-demo.yml"
+
+            ],
+        }
+    ]
+}
