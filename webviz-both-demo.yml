@@ -132,11 +132,11 @@ layout:
               - soil
             aggregation: mean
   
-  - page: Parameters vs inplace volumes
-    content:
-      - ParameterResponseCorrelation:
-          ensembles: *hm_ensembles
-          response_file: share/results/volumes/geogrid--vol.csv
-          response_filters:
-            ZONE: multi
-            REGION: multi
+   - page: Parameters vs inplace volumes
+     content:
+       - ParameterResponseCorrelation:
+           ensembles: *hm_ensembles
+           response_file: share/results/volumes/geogrid--vol.csv
+           response_filters:
+             ZONE: multi
+             REGION: multi
